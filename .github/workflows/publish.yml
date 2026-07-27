@@ -24,15 +24,15 @@ jobs:
         run: yarn
 
       - name: Build
-        run: yarn make
+        run: yarn make --publish always
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VITE_GOOGLE_CLIENT_ID: ${{ secrets.GCLIENT }}
       
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/v')
-        with:
-          files: out/make/**/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Release
+      #   uses: softprops/action-gh-release@v1
+      #   if: startsWith(github.ref, 'refs/tags/v')
+      #   with:
+      #     files: release/*
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
