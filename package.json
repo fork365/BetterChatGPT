@@ -1,7 +1,7 @@
 {
   "name": "better-chatgpt",
   "private": true,
-  "version": "1.0.5",
+  "version": "2.0.0",
   "type": "module",
   "homepage": "./",
   "main": "electron/index.cjs",
@@ -27,7 +27,8 @@
       "icon": "dist/icon-rounded-macos.png"
     },
     "mac": {
-      "icon": "dist/icon-rounded-macos.png"
+      "icon": "dist/icon-rounded-macos.png",
+      "identity": null
     },
     "linux": {
       "target": [
